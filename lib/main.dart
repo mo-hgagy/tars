@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tars/features/config/config.dart';
 import 'package:tars/features/home/home.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Home(),
+      home: ConfigScreen(),
     );
   }
 }
