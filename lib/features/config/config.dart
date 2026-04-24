@@ -27,7 +27,15 @@ class ConfigScreen extends StatelessWidget {
                   children: [
                     const Icon(Icons.settings, color: Colors.cyanAccent),
                     const SizedBox(width: 10),
-                    const Text("CONFIG", style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold, letterSpacing: 2)),
+                    const Text(
+                      "CONFIG",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 2,
+                      ),
+                    ),
                     const Spacer(),
                     _buildTopButton(Icons.save_alt, "SAVE"),
                     const SizedBox(width: 10),
@@ -40,23 +48,77 @@ class ConfigScreen extends StatelessWidget {
               Expanded(
                 child: GridView.count(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
-                  crossAxisCount: 4,
+                  crossAxisCount: 3,
                   mainAxisSpacing: 25,
                   crossAxisSpacing: 15,
                   children: [
-                    NeumorphicButton(icon: Icons.person, label: "System", onTap: () {}),
-                    NeumorphicButton(icon: Icons.smart_toy, label: "AI Model", onTap: () {}),
-                    NeumorphicButton(icon: Icons.bolt, label: "Skills", onTap: () {}),
-                    NeumorphicButton(icon: Icons.mic, label: "Speech", onTap: () {}),
-                    NeumorphicButton(icon: Icons.volume_up, label: "Voice", onTap: () {}),
-                    NeumorphicButton(icon: Icons.sentiment_satisfied, label: "Emotion", onTap: () {}),
-                    NeumorphicButton(icon: Icons.visibility, label: "Vision", onTap: () {}),
-                    NeumorphicButton(icon: Icons.storage, label: "Memory", onTap: () {}),
-                    NeumorphicButton(icon: Icons.tv, label: "Display", onTap: () {}),
-                    NeumorphicButton(icon: Icons.vpn_key, label: "Access", onTap: () {}),
-                    NeumorphicButton(icon: Icons.wifi, label: "WiFi", onTap: () {}),
-                    NeumorphicButton(icon: Icons.videogame_asset, label: "Controls", isSelected: true, onTap: () {}),
-                    NeumorphicButton(icon: Icons.battery_3_bar, label: "battery", isSelected: true, onTap: () {}),
+                    NeumorphicButton(
+                      icon: Icons.person,
+                      label: "System",
+                      onTap: () {},
+                    ),
+                    NeumorphicButton(
+                      icon: Icons.smart_toy,
+                      label: "AI Model",
+                      onTap: () {},
+                    ),
+                    NeumorphicButton(
+                      icon: Icons.bolt,
+                      label: "Skills",
+                      onTap: () {},
+                    ),
+                    NeumorphicButton(
+                      icon: Icons.mic,
+                      label: "Speech",
+                      onTap: () {},
+                    ),
+                    NeumorphicButton(
+                      icon: Icons.volume_up,
+                      label: "Voice",
+                      onTap: () {},
+                    ),
+                    NeumorphicButton(
+                      icon: Icons.sentiment_satisfied,
+                      label: "Emotion",
+                      onTap: () {},
+                    ),
+                    NeumorphicButton(
+                      icon: Icons.visibility,
+                      label: "Vision",
+                      onTap: () {},
+                    ),
+                    NeumorphicButton(
+                      icon: Icons.storage,
+                      label: "Memory",
+                      onTap: () {},
+                    ),
+                    NeumorphicButton(
+                      icon: Icons.tv,
+                      label: "Display",
+                      onTap: () {},
+                    ),
+                    NeumorphicButton(
+                      icon: Icons.vpn_key,
+                      label: "Access",
+                      onTap: () {},
+                    ),
+                    NeumorphicButton(
+                      icon: Icons.wifi,
+                      label: "WiFi",
+                      onTap: () {},
+                    ),
+                    NeumorphicButton(
+                      icon: Icons.videogame_asset,
+                      label: "Controls",
+                      isSelected: true,
+                      onTap: () {},
+                    ),
+                    NeumorphicButton(
+                      icon: Icons.battery_3_bar,
+                      label: "battery",
+                      isSelected: true,
+                      onTap: () {},
+                    ),
                   ],
                 ),
               ),
@@ -82,7 +144,10 @@ class ConfigScreen extends StatelessWidget {
         children: [
           Icon(icon, color: Colors.cyanAccent, size: 16),
           const SizedBox(width: 5),
-          Text(label, style: const TextStyle(color: Colors.cyanAccent, fontSize: 12)),
+          Text(
+            label,
+            style: const TextStyle(color: Colors.cyanAccent, fontSize: 12),
+          ),
         ],
       ),
     );
@@ -102,11 +167,22 @@ class ConfigScreen extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Icon(Icons.arrow_back_ios, color: Colors.cyanAccent, size: 16),
+              const Icon(
+                Icons.arrow_back_ios,
+                color: Colors.cyanAccent,
+                size: 16,
+              ),
               const SizedBox(width: 10),
               const Icon(Icons.videogame_asset, color: Colors.cyanAccent),
               const SizedBox(width: 10),
-              const Text("Controls", style: TextStyle(color: Colors.cyanAccent, fontSize: 18, fontWeight: FontWeight.bold)),
+              const Text(
+                "Controls",
+                style: TextStyle(
+                  color: Colors.cyanAccent,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ],
           ),
           const SizedBox(height: 15),
