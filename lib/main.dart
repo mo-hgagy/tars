@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tars/features/config/config.dart';
 import 'package:tars/features/home/home.dart';
 
 void main() {

@@ -1,18 +1,5 @@
 import 'package:flutter/material.dart';
-
-class MoveScreen extends StatefulWidget {
-  const MoveScreen({super.key});
-
-  @override
-  State<MoveScreen> createState() => _MoveScreenState();
-}
-
-class _MoveScreenState extends State<MoveScreen> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
+import 'package:tars/core/widgets/remote_key.dart';
 
 class MoveScreen extends StatelessWidget {
   const MoveScreen({super.key});
@@ -90,9 +77,9 @@ class MoveScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        _buildSpeedButton("SLOW", isActive: true),
+                        _buildSpeedButton("SLOW", isActive: true, ontap: () {  }),
                         const SizedBox(width: 15),
-                        _buildSpeedButton("FAST", isActive: false),
+                        _buildSpeedButton("FAST", isActive: false, ontap: () {  }),
                       ],
                     ),
                   ],
@@ -183,15 +170,18 @@ class MoveScreen extends StatelessWidget {
   }
 
   // ويدجيت أزرار السرعة
-  Widget _buildSpeedButton(String label, {bool isActive = false}) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 12),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: isActive ? Colors.cyanAccent : Colors.white10),
-        color: isActive ? Colors.cyanAccent.withOpacity(0.05) : Colors.transparent,
+  Widget _buildSpeedButton(String label, {bool isActive = false,void Function()? ontap }) {
+    return InkWell(
+      onTap: ontap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 12),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: isActive ? Colors.cyanAccent : Colors.white10),
+          color: isActive ? Colors.cyanAccent.withOpacity(0.05) : Colors.transparent,
+        ),
+        child: Text(label, style: TextStyle(color: isActive ? Colors.cyanAccent : Colors.grey, fontWeight: FontWeight.bold)),
       ),
-      child: Text(label, style: TextStyle(color: isActive ? Colors.cyanAccent : Colors.grey, fontWeight: FontWeight.bold)),
     );
   }
 }
